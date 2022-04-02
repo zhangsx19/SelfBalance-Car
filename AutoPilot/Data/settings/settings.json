@@ -1,0 +1,26 @@
+{
+    "AutoPilot": {
+        "LoadTestMapWhenStart": false,
+        "MapFolderPath": "F:\\Project\\2020SummerHardwareDesign\\AutoPilot\\Data\\map"
+    },
+    "BlueToothSerial": {
+        "BufferSize": 1000,
+        "BufferUpdateFrequency": 115200
+    },
+    "CV": {
+        "CacheFolder": "F:\\Project\\2020SummerHardwareDesign\\AutoPilot\\Data\\cache",
+        "CameraSamplingFrequency": 10,
+        "CompressedHeight": 400,
+        "CompressedWidth": 300,
+        "TestFolder": "F:\\Project\\2020SummerHardwareDesign\\AutoPilot\\Data\\test",
+        "TranslateToBW": false
+    },
+    "CarBlueTooth": {
+        "BaudRate": 9600,
+        "COM": 6
+    },
+    "CarControl": {
+        "MoveSpeed": 10,
+        "RotateAngle": 360
+    }
+}

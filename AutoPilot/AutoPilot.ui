@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1228</width>
+    <height>877</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AutoPilot</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>-6</x>
+      <y>-1</y>
+      <width>841</width>
+      <height>841</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="TabAutoPilot">
+     <attribute name="title">
+      <string>自动导航</string>
+     </attribute>
+     <widget class="QGraphicsView" name="ViewNavigation">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>51</y>
+        <width>841</width>
+        <height>751</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>93</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>设置目标点</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>10</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开始自动导航</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>10</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>设置导航路径</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>10</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>10</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="TabSettings">
+     <attribute name="title">
+      <string>设置</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>410</y>
+        <width>291</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>小车蓝牙设置</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>72</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>蓝牙串口：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="EditCOM">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>30</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>72</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>波特率：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="EditBaudRate">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>70</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>9600</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>106</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>当前连接状态：</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonCarBlueToothConnect">
+       <property name="geometry">
+        <rect>
+         <x>202</x>
+         <y>100</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>连接</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>10</y>
+        <width>281</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>图像识别</string>
+      </property>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>72</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>匹配测试：</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonSURFTest">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>30</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SURF样例测试</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>样例存储路径：</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonChooseDataPath">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>70</y>
+         <width>81</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>选择...</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>缓冲区路径：</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonChooseCacheFolder">
+       <property name="geometry">
+        <rect>
+         <x>192</x>
+         <y>110</y>
+         <width>81</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>选择...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonClearCache">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>121</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>清空缓冲区</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonOpenCacheFolder">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>150</y>
+         <width>131</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>打开缓冲区文件夹</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="RadioConvertToBW">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>310</y>
+         <width>221</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>转换成黑白图片以加速计算</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>190</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>摄像头每秒采样数：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="EditCameraSamplingFrequency">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>190</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>230</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>图像压缩后宽度：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="EditCompressedWidth">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>230</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>270</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>图像压缩后宽度：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="EditCompressedHeight">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>270</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonCVUpdate">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>340</y>
+         <width>261</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>更新数据</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>291</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>小车控制</string>
+      </property>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>单位旋转角度：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="EditRotateAngle">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>30</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>单位前进速度：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="EditMoveSpeed">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>70</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonCarControlUpDate">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>271</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>更新数据</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="ButtonFlushSettings">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>470</y>
+        <width>281</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>将所有数据存储到配置文件</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ButtonFlushUI">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>510</y>
+        <width>281</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>还原数据为默认值</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>291</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>自动导航</string>
+      </property>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>地图存储路径：</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonChooseMapFolder">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>30</y>
+         <width>121</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>选择...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonLoadTestMap">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>261</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>加载测试地图</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonOpenMapConfigFile">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>110</y>
+         <width>261</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>打开地图配置文件</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="RadioLoadTestMapOnStart">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>150</y>
+         <width>231</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>开始时加载测试地图</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonAutoPilotUpdate">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>180</y>
+         <width>261</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>更新数据</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>570</y>
+        <width>291</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>蓝牙串口显示</string>
+      </property>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>缓冲区大小：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="EditBufferSize">
+       <property name="geometry">
+        <rect>
+         <x>142</x>
+         <y>30</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>72</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>刷新频率：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="EditBufferUpdateFrequency">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>70</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>115200</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonBlueToothSerialUpdate">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>271</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>更新数据</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="ButtonChooseSettingsPath">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>430</y>
+        <width>281</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>选择配置文件路径</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="ButtonStartVideoTransportation">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>20</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>启动图像传输</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="BrowserBuffer">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>60</y>
+      <width>381</width>
+      <height>561</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ButtonSendData">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>630</y>
+      <width>93</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>发送数据</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="EditSendData">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>630</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ButtonClearBuffer">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>670</y>
+      <width>91</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空接收栏</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ButtonDisconnectCar">
+    <property name="geometry">
+     <rect>
+      <x>1110</x>
+      <y>670</y>
+      <width>111</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>断开</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ButtonConnectCar">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>670</y>
+      <width>161</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>连接</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>710</y>
+      <width>221</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>小车控制</string>
+    </property>
+    <widget class="QPushButton" name="ButtonForward">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>10</y>
+       <width>61</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>向前</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ButtonBackward">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>70</y>
+       <width>61</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>向后</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ButttonTurnRight">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>40</y>
+       <width>61</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>右转</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ButtonTurnLeft">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>61</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>左转</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ButtonStop">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>40</y>
+       <width>61</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>制动</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1228</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
